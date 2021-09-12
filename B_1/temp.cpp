@@ -7,6 +7,8 @@ int temp()
 	// added this line to test add commit and push to git
 	// added this line to test from another computer
 
+	//added to another test from laptop
+
 {
 	const double e = 2.7182818279;
 	double x = 0;
