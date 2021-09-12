@@ -8,6 +8,8 @@ int temp()
 	// added this line to test from another computer
 
 	//added to another test from laptop
+	// test from pc to laptop 
+
 
 {
 	const double e = 2.7182818279;
