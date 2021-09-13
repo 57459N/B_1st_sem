@@ -21,6 +21,7 @@ int main10()
 	for (int i = 2; i < sequence_len; i++)
 	{
 		prevQ = (double)num_curr / (double)num_prev;
+
 		num_prev = num_curr;
 		cin >> num_curr;
 
@@ -34,6 +35,7 @@ int main10()
 		{
 			len_curr = 1;
 		}
+		 
 		if (len_curr > len_max)
 			len_max = len_curr;		
 	}
