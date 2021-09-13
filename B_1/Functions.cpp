@@ -18,10 +18,9 @@ int len(int num)
 {
 	int len = 0;
 
-	while (true)
+	while (num)
 	{
-		int x = pow(10, len);
-		if (num % x == num) { break; }
+		num /= 10;
 		len++;
 	}
 	return len;

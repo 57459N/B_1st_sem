@@ -2,9 +2,9 @@
 #include <cmath>
 
 int dig_num(int num, int pos);
+int len(int num);
 
 using namespace std;
-
 
 
 int main7()
@@ -15,33 +15,22 @@ int main7()
 	cout << "Enter the number: ";
 	cin >> number;
 
-	int len = 0;
-	
-	while (true)
-	{
-		int x = pow(10, len);
-		if (number % x == number) { break; }
-		len++;
-	}
+	int num_len = len(number);
 
-	cout << "Number len is "<<len << endl;
-
-
-	int duplicate = 0;
-
-	for (int i = 1; i <= len; i++) 
+	int duplicate = 1;
+	for (int i = 1; i <= num_len; i++) 
 	{
 		int current_dig = dig_num(number, i);
-		for (int k = 1; k <= len; k++) 
+		for (int k = i; k <= num_len; k++) 
 		{
 			if (current_dig == dig_num(number, k)) { duplicate++; }
 		}
 	}
 
-	if (duplicate - len == 2) {
-		cout << "It is True, there are 2 duplicated digits !";
+	if (duplicate - num_len == 2) {
+		cout << endl <<"It is True, there are 2 duplicated digits !" << endl;
 	}
-	else { cout << "False, there are more or less the 2 dulicated digits!"; return 1; }
+	else { cout << endl << "False, there are more or less the 2 dulicated digits!" << endl; return 1; }
 
 	return 0;
 }

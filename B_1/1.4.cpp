@@ -17,10 +17,10 @@ int main4()
 	cin >> Px >> Py;
 	cout << "\n";
 
-	if (1 > Qx > 9 || 
-		1 > Qy > 9 || 
-		1 > Px > 9 || 
-		1 > Py > 9 ) 
+	if (1 > Qx && Qx > 9 || 
+		1 > Qy && Qy > 9 ||
+		1 > Px && Px > 9 ||
+		1 > Py && Py > 9 )
 	{ cout << "Invalid parametr value"; return 1; }
 
 	if (Qx == Px ||

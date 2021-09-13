@@ -1,8 +1,7 @@
 #include <iostream>
 #include <cmath>
 
-int dig_num(int num, int pos);
-int len(int num);
+int sum_of_digits(int num);
 
 using namespace std;
 
@@ -18,23 +17,12 @@ int main8()
 	cout << "Enter number of digits after a dot: ";
 	cin >> k;
 	
-	int k_sum = 0;
+	int grade_after_dot = pow(10, k);
+	int after_dot = int(number * grade_after_dot) % grade_after_dot;
 
-	for (int i = 1; i<=k; i++)
-	{
-		k_sum += int(number * pow(10, i)) % 10;
-	}
-
+	int befor_dot = number;
 	
-	int befor_dot_sum = 0;
-	int inum = number;
-
-	for (int i = 1; i <= len(inum); i++)
-	{
-		befor_dot_sum += dig_num(inum, i);
-	}
-
-	if (k_sum == befor_dot_sum)
+	if (sum_of_digits(befor_dot) == sum_of_digits(after_dot))
 	{
 		cout << endl <<"Sum befor dot equals sum after dot!" << endl;
 	}

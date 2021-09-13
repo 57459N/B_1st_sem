@@ -11,11 +11,12 @@ int main6();
 int main7();
 int main8();
 int main9();
+int main10();
 
 using namespace std;
 
 int main()
 {
-	return main9();
+	return main10();
 	
 }

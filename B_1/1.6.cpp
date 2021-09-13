@@ -20,7 +20,7 @@ int main6()
 		cout << "Int has only 4 bytes or 32 bits!"; return 1;
 	}
 
-	int bit_pos_value = N & 1 << bit_pos;
+	int bit_pos_value = N & (1 << bit_pos);
 
 	cout << endl
 		 << "DEC " << setw(16) << N << endl
@@ -33,7 +33,7 @@ int main6()
 	int invert1, invert2 = 0;
 	cin >> invert1 >> invert2;
 
-	int invertedN = N ^ 1 << invert1 | 1 << invert2;
+	int invertedN = N ^ (1 << invert1 | 1 << invert2);
 
 	if (invert2 > invert1) { swap(invert1, invert2); }
 
