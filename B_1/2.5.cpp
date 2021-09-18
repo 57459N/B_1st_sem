@@ -3,7 +3,7 @@
 
 using namespace std;
 
-int main10()
+int main12()
 {
 	int sequence_len = 0;
 	cout << "Enter len of the sequence: ";

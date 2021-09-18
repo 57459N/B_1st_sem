@@ -8,7 +8,7 @@ using namespace std;
 
 
 
-int main9()
+int main10()
 {
 	int prime_count, sum = 0;
 
