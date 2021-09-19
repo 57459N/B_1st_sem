@@ -51,6 +51,7 @@ double my_Taylor(double num)
 	cout << endl << num << " - " << setprecision(7) << y << " - " << count << endl;
 	return 0;
 }
+
 int main9()
 {
 		
