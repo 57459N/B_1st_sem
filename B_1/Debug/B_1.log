@@ -1,2 +1,4 @@
-﻿  2.2.cpp
+﻿  2.4.cpp
+D:\cpp\git\B_1\B_1\2.4.cpp(22,24): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
+D:\cpp\git\B_1\B_1\2.4.cpp(24,25): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
   B_1.vcxproj -> D:\cpp\git\B_1\Debug\B_1.exe
