@@ -151,6 +151,8 @@
     <ClCompile Include="2.3.cpp" />
     <ClCompile Include="2.4.cpp" />
     <ClCompile Include="2.5.cpp" />
+    <ClCompile Include="2.6.cpp" />
+    <ClCompile Include="2.7.cpp" />
     <ClCompile Include="Functions.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="temp.cpp" />

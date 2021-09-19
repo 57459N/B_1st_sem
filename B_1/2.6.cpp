@@ -8,7 +8,7 @@ int dig_num(int num, int pos);
 using namespace std;
 
 
-int main11()
+int main13()
 {
 	int k = 0;
 	cout << "Enter position of digit: ";
