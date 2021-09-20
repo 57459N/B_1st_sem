@@ -20,8 +20,8 @@ int main6()
 		cout << "Int has only 4 bytes or 32 bits!"; return 1;
 	}
 
-	int bit_pos_value = N & (1 << bit_pos);
-
+	int bit_pos_value = N & (1 << bit_pos);  
+	
 	cout << endl
 		 << "DEC " << setw(16) << N << endl
 		 << "BIN " << setw(16) << bitset<16>(N) << endl
