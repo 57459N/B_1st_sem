@@ -29,21 +29,10 @@ int main777()
 
 	for (int i = 0; i < n; i++)
 	{
-		int end = 0;
-		if (i + k + 1 >= n)
-		{
-			end = n ;
-		}
-		else 
-		{
-			end = i + k + 1 ;
-		}
-		cout << end << endl;
+		int end = i + k + 1 >= n ? n : i + k + 1;
+
 		for (int j = i; j < end; j++)
-		{
-			if (i >= 5 || j >= 5) { cout << "HUY!!!" << endl; }
 			arrayA[i][j] = 1;
-		}
 	}
 	cout << endl;
 
@@ -57,5 +46,6 @@ int main777()
 
 	cout << "\n\n\n";
 
+	system("pause");
 	return 0;
 }
