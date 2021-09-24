@@ -18,11 +18,14 @@ int main13();
 int main14();
 int main15();
 
+int main1337();
+int main777();
+
 using namespace std;
 
 int main()
 {
 	
-	return main15();
+	return main777();
 	
 }

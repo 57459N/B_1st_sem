@@ -2,15 +2,9 @@
 
 using namespace std;
 
-int dig_num(int num, int pos)
+int dig_num(long long num, int pos)
 {
-	int p = pow(10, pos);
-	int pp = pow(10, pos - 1);
-
-	int x = (num % p - num % pp) / pp;
-
-	return x;
-
+	return long long(num / long long (pow(10, pos - 1))) % 10;
 }
 
 
