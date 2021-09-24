@@ -1,8 +1,9 @@
 #include <iostream>
 #include <cmath>
 
-int dig_num(int num, int pos);
+int dig_num(long long num, int pos);
 int len(int num);
+
 
 using namespace std;
 
@@ -34,4 +35,3 @@ int main7()
 
 	return 0;
 }
-

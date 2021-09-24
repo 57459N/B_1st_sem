@@ -3,7 +3,7 @@
 
 int len(int num);
 
-int dig_num(int num, int pos);
+int dig_num(long long num, int pos);
 
 using namespace std;
 
