@@ -38,6 +38,17 @@ int sum_of_digits(int num)
 	{
 		sum += dig_num(num, i);
 	}
-
 	return sum;
+}
+
+unsigned long long factorial(unsigned long long num) 
+{
+	if (num == 1)
+	{
+		return 1;
+	}
+	else 
+	{
+		return num * factorial(num - 1);	
+	}
 }

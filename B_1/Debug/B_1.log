@@ -1,3 +1,2 @@
-﻿  3.2.not_work.cpp
-D:\cpp\git\B_1\B_1\3.2.not_work.cpp(16,12): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+﻿  3.4.cpp
   B_1.vcxproj -> D:\cpp\git\B_1\Debug\B_1.exe
