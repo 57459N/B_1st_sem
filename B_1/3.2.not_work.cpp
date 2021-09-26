@@ -7,7 +7,7 @@
 using namespace std;
 
 
-int main666()
+int main16()
 {
 	int n = 10;
 	cout << "Enter the resolution of matrix: ";
@@ -16,6 +16,7 @@ int main666()
 	srand(time(NULL));
 
 	int** arrayA = new int* [n];
+	int** arrayB = new int* [n];
 
 	for (int i = 0; i < n; i++)
 		arrayA[i] = new int[n];
@@ -29,6 +30,29 @@ int main666()
 		}
 		cout << endl;
 	}
+
+	cout << "\n\n\n";
+	for (int i = 0; i < n; i++)
+	{
+		arrayB[i] = new int[n];
+		for (int j = 0; j < n; j++)
+		{
+			int max = 0;
+			for (int k = i; k < n; k++)
+			{
+				for (int l = j; l < n; l++)
+				{
+					if (arrayA[k][l] > max)
+						max = arrayA[k][l];
+				}
+			}
+			arrayB[i][j] = max;
+			cout << setw(4) << arrayB[i][j];
+		}
+		cout << endl;
+	}
+
+
 
 	cout << "\n\n\n";
 	
