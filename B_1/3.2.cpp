@@ -9,7 +9,7 @@ using namespace std;
 
 int main16()
 {
-	int n = 10;
+	int n = 0;
 	cout << "Enter the resolution of matrix: ";
 	cin >> n;
 
@@ -18,8 +18,10 @@ int main16()
 	int** arrayA = new int* [n];
 	int** arrayB = new int* [n];
 
-	for (int i = 0; i < n; i++)
+	for (int i = 0; i < n; i++) {
 		arrayA[i] = new int[n];
+		arrayB[i] = new int[n];
+	}
 
 	for (int i = 0; i < n; i++)
 	{
@@ -32,9 +34,9 @@ int main16()
 	}
 
 	cout << "\n\n\n";
+
 	for (int i = 0; i < n; i++)
 	{
-		arrayB[i] = new int[n];
 		for (int j = 0; j < n; j++)
 		{
 			int max = 0;
@@ -42,8 +44,7 @@ int main16()
 			{
 				for (int l = j; l < n; l++)
 				{
-					if (arrayA[k][l] > max)
-						max = arrayA[k][l];
+					max = std::max(max, arrayA[k][l]);
 				}
 			}
 			arrayB[i][j] = max;

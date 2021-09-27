@@ -11,7 +11,17 @@ int x = 1000;
 
 int* sort(int* arr)
 {
-	for (int i = 0; i < x-1; i++)
+	int n = 1;
+	while (arr[n] == 0)
+		n++;
+	if (n - 1 > 0)
+	for (int i = n+1; i < x; i++)  // 0  0 0 0 12 n = 3
+	{
+		arr[i - n] = arr[i];
+	}
+	arr[0] = n - 1;
+
+	for (int i = 1; i < x-1; i++)
 	{
 		if (arr[i] > 9999)
 		{
@@ -32,15 +42,16 @@ int main18()
 	cin >> num;
 
 	int* arrayA = new int[x];
-	for (int i = 1; i < x; i++)
+	
+	arrayA[0] = 0;
+	arrayA[1] = 1;
 
-	arrayA[0] = 1;
-	for (int i = 1; i < x; i++)
+	for (int i = 2; i < x; i++)
 		arrayA[i] = 0;
 
 	for (int i = 1; i <= num; i++)
 	{
-		for (int j = 0; j < x; j++)
+		for (int j = 1; j < x; j++)
 			arrayA[j] *= i;
 
 		arrayA = sort(arrayA);
@@ -49,10 +60,7 @@ int main18()
 	for (int i = 0; i < x; i++)
 		cout << arrayA[i] << endl;
 
-	system("pause");
-
 	delete[] arrayA;
-
-
+	
 	return 0;
 }
