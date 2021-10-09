@@ -43,7 +43,7 @@ int* optimize(int* arr)
 	return arr;
 }
 
-int main17()
+int main18()
 {
 
 	int number = 0;
