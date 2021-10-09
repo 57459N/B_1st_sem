@@ -1,2 +1,7 @@
+<<<<<<< HEAD
 ﻿  Main.cpp
+=======
+﻿  3.1.cpp
+D:\cpp\git\B_1\B_1\3.1.cpp(15,12): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+>>>>>>> master
   B_1.vcxproj -> D:\cpp\git\B_1\Debug\B_1.exe

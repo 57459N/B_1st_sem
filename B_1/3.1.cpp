@@ -11,7 +11,7 @@ int main15()
 	int n = 10;
 	cout << "Enter the length of array: ";
 	cin >> n;
-	
+	getchar();
 	srand(time(NULL));
 
 	int* arrayA = new int[n];
@@ -22,24 +22,25 @@ int main15()
 		<< endl;
 
 	
-	cin >> choice;
+	choice = getchar();
+	cout << endl << choice << endl;
 	//if ((int)choice 
-	if(choice)
+	if((int)choice == 48 || (int)choice == 10)
 	{
-		for (int i = 0; i < n; i++)
-			cin >> arrayA[i];
-		cout << "A : ";
-		for (int i = 0; i < n; i++)
-			cout << arrayA[i] << " ";
-	}
-	else{
 		cout << "A : ";
 		for (int i = 0; i < n; i++)
 		{
 			arrayA[i] = rand() % 10000;
 			cout << arrayA[i] << " ";
-
 		}
+	}
+	else{
+		for (int i = 0; i < n; i++)
+			cin >> arrayA[i];
+		cout << "A : ";
+		for (int i = 0; i < n; i++)
+			cout << arrayA[i] << " ";
+		
 	}
 	int* arrayB = new int[n];
 	cout << endl << "B : ";
