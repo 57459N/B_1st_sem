@@ -21,21 +21,7 @@ int count_zero(int* arr) {
 
 int* optimize(int* arr)
 {
-<<<<<<< HEAD
 	for (int i = count_zero(arr); i < n; i++)
-=======
-	int n = 1;
-	while (arr[n] == 0)
-		n++;
-	if (n - 1 > 0)
-	for (int i = n+1; i < x; i++)  // 0  0 0 0 12 n = 3
-	{
-		arr[i - n] = arr[i];
-	}
-	arr[0] = n - 1;
-
-	for (int i = 1; i < x-1; i++)
->>>>>>> d24ad2d3e6055430500338caf54551e6c809cacd
 	{
 		if (arr[i] > 9999)
 		{
@@ -57,10 +43,9 @@ int* optimize(int* arr)
 	return arr;
 }
 
-int main18()
+int main17()
 {
 
-<<<<<<< HEAD
 	int number = 0;
 	cout << "Enter some number: ";
 	cin >> number;
@@ -68,33 +53,18 @@ int main18()
 	int* arr = new int[n] {};
 
 	arr[0] = 0;
-=======
-	int* arrayA = new int[x];
-	
-	arrayA[0] = 0;
-	arrayA[1] = 1;
-
-	for (int i = 2; i < x; i++)
-		arrayA[i] = 0;
->>>>>>> d24ad2d3e6055430500338caf54551e6c809cacd
 
 	arr[1] = 1;
 
 	for (int i = 1; i <= number; i++)
 	{
-<<<<<<< HEAD
 		for (int j = 1; j <= number; j++)
 		{
 			arr[j] *= i;
 		}
-=======
-		for (int j = 1; j < x; j++)
-			arrayA[j] *= i;
->>>>>>> d24ad2d3e6055430500338caf54551e6c809cacd
 
 		arr = optimize(arr);
 	}
-<<<<<<< HEAD
 
 	int end = 0;
 	for (int i = n - 1; i > 0; i--)
@@ -130,13 +100,5 @@ int main18()
 	}
 	cout << "e" << arr[0];
 
-=======
-	cout << "\n\n\n";
-	for (int i = 0; i < x; i++)
-		cout << arrayA[i] << endl;
-
-	delete[] arrayA;
-	
->>>>>>> d24ad2d3e6055430500338caf54551e6c809cacd
 	return 0;
 }
