@@ -19,6 +19,8 @@ int main15();
 int main16();
 int main18();
 
+int main20();
+
 int main1337();
 int main777();
 
