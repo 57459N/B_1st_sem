@@ -1,58 +1,104 @@
 #include <iostream>
 #include <cmath>
 #include <time.h>
-#include <iomanip>
 
-unsigned long long factorial(unsigned long long num);
-
-
-int x = 1000;
-
-
-int* sort(int* arr)
-{
-	for (int i = 0; i < x-1; i++)
-	{
-		if (arr[i] > 9999)
-		{
-			arr[i + 1] += int(arr[i] / 10000);
-			arr[i] = arr[i] % 10000;
-		}
-	}
-	return arr;
-}
 
 using namespace std;
 
+int n = 1000;
+
+int len(int num);
+
+
+int count_zero(int* arr) {
+	int zero = 0;
+
+	for (int i = 1; i < n && arr[i] == 0; i++, zero++);
+
+
+	return zero;
+}
+
+int* optimize(int* arr)
+{
+	for (int i = count_zero(arr); i < n; i++)
+	{
+		if (arr[i] > 9999)
+		{
+			int x = arr[i] / 10000;
+			arr[i + 1] += x;
+			arr[i] -= x * 10000;
+		}
+	}
+
+	int zeros = count_zero(arr);
+
+	for (int i = 1; i < n - zeros; i++)
+	{
+		arr[i] = arr[i + zeros];
+	}
+
+	arr[0] += zeros;
+
+	return arr;
+}
 
 int main18()
 {
-	unsigned long long  num = 0;
-	cout << "Enter numer N to count numbers of different digits in its factorial: ";
-	cin >> num;
 
-	int* arrayA = new int[x];
-	for (int i = 1; i < x; i++)
+	int number = 0;
+	cout << "Enter some number: ";
+	cin >> number;
 
-	arrayA[0] = 1;
-	for (int i = 1; i < x; i++)
-		arrayA[i] = 0;
+	int* arr = new int[n] {};
 
-	for (int i = 1; i <= num; i++)
+	arr[0] = 0;
+
+	arr[1] = 1;
+
+	for (int i = 1; i <= number; i++)
 	{
-		for (int j = 0; j < x; j++)
-			arrayA[j] *= i;
+		for (int j = 1; j <= number; j++)
+		{
+			arr[j] *= i;
+		}
 
-		arrayA = sort(arrayA);
+		arr = optimize(arr);
 	}
-	cout << "\n\n\n";
-	for (int i = 0; i < x; i++)
-		cout << arrayA[i] << endl;
 
-	system("pause");
+	int end = 0;
+	for (int i = n - 1; i > 0; i--)
+	{
+		if (!arr[i])
+		{
+			end++;
+		}
+		else
+		{
+			break;
+		}
+	}
+	int ten = 0;
+	cout << arr[n - end - 1] << endl;
+	for (int i = n - end - 2; i > 0; i--)
+	{
+		switch (len(arr[i]))
+		{
+		case 4: break;
+		case 3: cout << "0"; break;
+		case 2: cout << "00"; break;
+		case 1: cout << "00"; break;
+		}
 
-	delete[] arrayA;
-
+		cout << arr[i] << " ";
+		ten++;
+		if (ten == 9)
+		{
+			ten = 0;
+			cout << endl;
+		}
+	}
+	cout << "e" << arr[0];
 
 	return 0;
 }
