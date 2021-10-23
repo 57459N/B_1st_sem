@@ -33,13 +33,11 @@
 
 .vs/
 
-Debug/B_1.pdb
-Debug/B_1.ilk 
-B_1/Debug/vc142.pdb 
-B_1/Debug/vc142.idb 
-B_1/Debug/B_1.tlog/link.write.1.tlog
-B_1/Debug/B_1.tlog/link.read.1.tlog
-B_1/Debug/B_1.tlog/link.command.1.tlog
-B_1/Debug/B_1.tlog/CL.write.1.tlog
-B_1/Debug/B_1.tlog/CL.read.1.tlog
-B_1/Debug/B_1.tlog/CL.command.1.tlog
+*.pdb
+*.ilk 
+*.idb 
+*.tlog
+*.user
+
+Debug/
+x64/
