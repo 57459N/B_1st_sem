@@ -156,11 +156,9 @@
     <ClCompile Include="3.2.cpp" />
     <ClCompile Include="3.3.cpp" />
     <ClCompile Include="3.4.cpp" />
-    <ClCompile Include="4.1.cpp" />
-    <ClCompile Include="angle1.cpp" />
+    <ClCompile Include="3.5.cpp" />
     <ClCompile Include="Functions.cpp" />
     <ClCompile Include="Main.cpp" />
-    <ClCompile Include="alternative_2.1.1.cpp" />
     <ClCompile Include="temp.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

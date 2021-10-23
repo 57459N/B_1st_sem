@@ -5,6 +5,9 @@ cmake_minimum_required(VERSION 3.19 )
 get_filename_component(ProjectId ${CMAKE_CURRENT_LIST_DIR} NAME)
 string(REPLACE " " "_" ProjectId ${ProjectId})
 
+set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
 project(${ProjectId}
         LANGUAGES C CXX)
 
