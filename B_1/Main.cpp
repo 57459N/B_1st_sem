@@ -25,7 +25,5 @@ using namespace std;
 
 int main()
 {
-	
-	return main20();
-	
+	return main18();
 }
