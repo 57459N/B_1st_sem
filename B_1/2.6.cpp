@@ -1,9 +1,7 @@
 #include <iostream>
 #include <cmath>
 
-int len(int num);
-
-int dig_num(long long num, int pos);
+#include "Functions.h"
 
 using namespace std;
 

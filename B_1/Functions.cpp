@@ -1,10 +1,13 @@
 #include <cmath>
+#include <cstdint>
+
+#include "Functions.h"
 
 using namespace std;
 
-int dig_num(long long num, int pos)
+int dig_num(uint64_t num, int pos)
 {
-	return long long(num / long long (pow(10, pos - 1))) % 10;
+	return uint64_t(num / uint64_t(pow(10, pos - 1))) % 10;
 }
 
 

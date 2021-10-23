@@ -31,13 +31,19 @@
 *.out
 *.app
 
-.vs/
-
+# Debug symbols
 *.pdb
+
+#MSVS
+Debug/
+x64/
+.vs/
 *.ilk 
 *.idb 
 *.tlog
 *.user
 
-Debug/
-x64/
+
+#CLion
+.idea/
+cmake-build-*/
