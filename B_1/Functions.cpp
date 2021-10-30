@@ -1,5 +1,7 @@
 #include <cmath>
 #include <cstdint>
+#include <iostream>
+#include <cstring>
 
 #include "Functions.h"
 
