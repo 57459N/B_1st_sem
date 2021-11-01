@@ -21,11 +21,13 @@ int main17();
 int main18();
 int main19();
 
+int main26();
+
 using namespace std;
 
 int main()
 {
 	
-	return main19();
+	return main26();
 	
 }
