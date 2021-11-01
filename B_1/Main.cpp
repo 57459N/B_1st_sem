@@ -21,6 +21,7 @@ int main17();
 int main18();
 int main19();
 
+int main25();
 int main26();
 
 using namespace std;
@@ -28,6 +29,6 @@ using namespace std;
 int main()
 {
 	
-	return main26();
+	return main25();
 	
 }
