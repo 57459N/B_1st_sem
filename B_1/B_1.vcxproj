@@ -157,6 +157,9 @@
     <ClCompile Include="3.3.cpp" />
     <ClCompile Include="3.4.cpp" />
     <ClCompile Include="3.5.cpp" />
+    <ClCompile Include="5.1.cpp" />
+    <ClCompile Include="5.3.cpp" />
+    <ClCompile Include="5.4.cpp" />
     <ClCompile Include="Functions.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="temp.cpp" />
