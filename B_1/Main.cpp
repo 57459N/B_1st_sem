@@ -20,6 +20,12 @@ int main16();
 int main17();
 int main18();
 int main19();
+int main20();
+int main21();
+int main22();
+
+int main25();
+int main26();
 
 int main23();
 
@@ -35,6 +41,6 @@ using namespace std;
 int main()
 {
 	
-	return main23();
+	return main25();
 	
 }
