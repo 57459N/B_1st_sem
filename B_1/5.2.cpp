@@ -1,13 +1,14 @@
 #include <iostream>
 #include <iomanip>
+#include <chrono>
 
 using namespace std;
 
-int quick_cmp = 0;
-int quick_swp = 0;
+uint64_t quick_cmp = 0;
+uint64_t quick_swp = 0;
  
-int select_cmp = 0;
-int select_swp = 0;
+uint64_t select_cmp = 0;
+uint64_t select_swp = 0;
 
 template <typename T>
 void printArr(T* arr, int len)
@@ -99,29 +100,125 @@ void selectSort(T* arr, int len)
     }
 }
 
+void amount_reset() 
+{
+    select_swp = 0;
+    select_cmp = 0;
+    quick_swp = 0;
+    quick_cmp = 0;
+}
+
+void amount_print(char choice)
+{
+    if (choice == 's')
+        cout << setw(3) << "s_swap: " << select_swp << " " << setw(3) << "s_comp: " << select_cmp;
+    else if (choice == 'q')
+        cout << setw(3) << "q_swap: " << quick_swp << " " << setw(3) << "q_comp: " << quick_cmp;
+}
+
+uint64_t nanos()
+{
+    uint64_t ns = std::chrono::duration_cast<std::chrono::nanoseconds>(std::chrono::high_resolution_clock::
+        now().time_since_epoch()).count();
+    return ns;
+}
+
 int main24()
 {
-    int power = 100;
-    for (int i = 1; i < 6; i++)
+    int power = 1000;
+    int time_begin = 0;
+    uint64_t start = 0;
+
+    for (int i = 0; i < 5; i++)
     {
-        int len = (int)pow(100, i);
+        amount_reset();
+
+        int len = power * (int)pow(10, i);
         int* array = new int[len];
 
-        cout << len << " :" << endl;
+        cout << "---------------- " << len << " ----------------" << endl;
+        cout << "Quick:\n";
         cout << "Min to max:\n";
-        mintomax(array, len);
-        selectSort(array, len);
-        printArr(array, len);
-        cout << setw(3) << "s_swap: " << select_swp << " " << setw(3) << "s_comp: " << select_cmp;
+            
+            mintomax(array, len);
+            start = nanos();
+            quickSort(array, len - 1);
+            //printArr(array, len);
+            amount_print('q');
+            cout << endl << "\t" << nanos() - start << " ns" << endl;
+            amount_reset();
+            
+        cout << "\n\n\n";
 
-        cout << endl;
-
-        mintomax(array, len);
-        quickSort(array, len - 1);
-        printArr(array, len);
-        cout << setw(3) << "q_swap: " << quick_swp << " " << setw(3) << "q_comp: " << quick_cmp;
+        cout << "Max to min:\n";
+            maxtomin(array, len);
+            start = nanos();
+            quickSort(array, len - 1);
+            //printArr(array, len);
+            amount_print('q');
+            cout << endl << "\t" << nanos() - start << " ns" << endl;
+            amount_reset();
 
         cout << "\n\n\n";
+
+        cout << "Rand:\n";
+            randArr(array, len);
+            start = nanos();
+            quickSort(array, len - 1);
+            //printArr(array, len);
+            amount_print('q');
+            cout << endl << "\t" << nanos() - start << " ns" << endl;
+            amount_reset();
+
+        cout << "\n\n\n";
+        delete[] array;
+
+    }
+
+    for (int i = 0; i < 5; i++)
+    {
+        amount_reset();
+
+        int len = power * (int)pow(10, i);
+        int* array = new int[len];
+
+        cout << "---------------- " << len << " ----------------" << endl;
+        cout << "Select:\n";
+
+        cout << "Min to max:\n";
+
+        mintomax(array, len);
+        start = nanos();
+        selectSort(array, len);
+        //printArr(array, len);
+        amount_print('s');
+        cout << endl << "\t" << nanos() - start << " ns" << endl;
+        amount_reset();
+
+        cout << "\n\n\n";
+
+        cout << "Max to min:\n";
+        maxtomin(array, len);
+        start = nanos();
+        selectSort(array, len);
+        //printArr(array, len);
+        amount_print('s');
+        cout << endl << "\t" << nanos() - start << " ns" << endl;
+        amount_reset();
+
+        cout << "\n\n\n";
+
+        cout << "Rand:\n";
+        randArr(array, len);
+        start = nanos();
+        selectSort(array, len);
+        //printArr(array, len);
+        amount_print('s');
+        cout << endl << "\t" << nanos() - start << " ns" << endl;
+        amount_reset();
+
+        cout << "\n\n\n";
+        delete[] array;
 
     }
     
