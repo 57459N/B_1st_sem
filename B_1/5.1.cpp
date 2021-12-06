@@ -52,7 +52,6 @@ void calculate_lnk(double x, double E, double &res)
 
 		plus = minus * powx / pow2 / fact;
 		sum += plus;
-		cout << setw(10) << k << " " << setw(10) << plus << " " << setw(10) << sum << endl;
 
 	} while (abs(plus) > E);
 
@@ -80,7 +79,6 @@ void calculate_ptr(double x, double E, double* res)
 
 		plus = minus * powx / pow2 / fact;
 		sum += plus;
-		cout << setw(10) << k << " " << setw(10) << plus << " " << setw(10) << sum << endl;
 
 	} while (abs(plus) > E);
 
@@ -98,7 +96,7 @@ int main23()
 	double sum = 0;
 
 	calculate_lnk(x, E, sum);
-	cout << sum;
+	cout << sum << endl;
 
 	calculate_ptr(x, E, &sum);
 	cout << sum;
