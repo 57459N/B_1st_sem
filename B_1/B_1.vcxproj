@@ -160,8 +160,8 @@
     <ClCompile Include="4.1.cpp" />
     <ClCompile Include="4.2.cpp" />
     <ClCompile Include="4.3.cpp" />
-     <ClCompile Include="5.3.cpp" />
-     <ClCompile Include="5.1.cpp" />
+    <ClCompile Include="5.1.cpp" />
+    <ClCompile Include="5.2.cpp" />
     <ClCompile Include="5.3.cpp" />
     <ClCompile Include="5.4.cpp" />
     <ClCompile Include="Functions.cpp" />
