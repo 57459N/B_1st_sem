@@ -35,6 +35,6 @@ using namespace std;
 int main()
 {
 	
-	return main28();
+	return temp();
 	
 }
