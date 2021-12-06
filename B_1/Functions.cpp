@@ -60,21 +60,54 @@ unsigned long long factorial(unsigned long long num)
 	}
 }
 
-void loadNames(string** males, string** females)
+void load(string* names, string* surnames, string* patronymics, string sex)
 {
 	setlocale(LC_ALL, "Russian");
 	string line;
-	ifstream M("D:\\Docs\\cpp\\git\\B_1st_sem\\male_names.txt");
 
-	if (M.is_open())
+	ifstream Names("..\\" + sex + "_names.txt");
+
+	if (Names.is_open())
 	{	
 		int i = 0;
-		while (getline(M, line))
+		while (getline(Names, line))
 		{
-			*males[i] = line;
+			names[i] = line;
 			i++;
 		}
 
 	}
-	M.close();
+	Names.close();
+
+	
+	ifstream Surnames("..\\" + sex + "_surnames.txt");
+
+	if (Surnames.is_open())
+	{
+		
+		int i = 0;
+		while (getline(Surnames, line))
+		{
+			surnames[i] = line;
+			i++;
+		}
+
+	}
+	Surnames.close();
+
+	ifstream Patronymics("..\\" + sex + "_patronymics.txt");
+
+	if (Patronymics.is_open())
+	{
+
+		int i = 0;
+		while (getline(Patronymics, line))
+		{
+			patronymics[i] = line;
+			i++;
+		}
+
+	}
+	Patronymics.close();
+
 }

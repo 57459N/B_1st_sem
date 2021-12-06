@@ -16,7 +16,7 @@ int sum_of_digits(int num);
 
 unsigned long long factorial(unsigned long long num);
 
-void loadNames(string** males, string** females);
+void load(string* names, string* surnames, string* patronymics, string sex = "male");
 
 
 
