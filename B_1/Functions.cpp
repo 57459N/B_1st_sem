@@ -2,6 +2,8 @@
 #include <cstdint>
 #include <iostream>
 #include <cstring>
+#include <string>
+#include <fstream>
 
 #include "Functions.h"
 
@@ -56,4 +58,56 @@ unsigned long long factorial(unsigned long long num)
 	{
 		return num * factorial(num - 1);	
 	}
+}
+
+void load(string* names, string* surnames, string* patronymics, string sex)
+{
+	setlocale(LC_ALL, "Russian");
+	string line;
+
+	ifstream Names("..\\" + sex + "_names.txt");
+
+	if (Names.is_open())
+	{	
+		int i = 0;
+		while (getline(Names, line))
+		{
+			names[i] = line;
+			i++;
+		}
+
+	}
+	Names.close();
+
+	
+	ifstream Surnames("..\\" + sex + "_surnames.txt");
+
+	if (Surnames.is_open())
+	{
+		
+		int i = 0;
+		while (getline(Surnames, line))
+		{
+			surnames[i] = line;
+			i++;
+		}
+
+	}
+	Surnames.close();
+
+	ifstream Patronymics("..\\" + sex + "_patronymics.txt");
+
+	if (Patronymics.is_open())
+	{
+
+		int i = 0;
+		while (getline(Patronymics, line))
+		{
+			patronymics[i] = line;
+			i++;
+		}
+
+	}
+	Patronymics.close();
+
 }
