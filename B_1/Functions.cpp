@@ -2,6 +2,8 @@
 #include <cstdint>
 #include <iostream>
 #include <cstring>
+#include <string>
+#include <fstream>
 
 #include "Functions.h"
 
@@ -56,4 +58,23 @@ unsigned long long factorial(unsigned long long num)
 	{
 		return num * factorial(num - 1);	
 	}
+}
+
+void loadNames(string** males, string** females)
+{
+	setlocale(LC_ALL, "Russian");
+	string line;
+	ifstream M("D:\\Docs\\cpp\\git\\B_1st_sem\\male_names.txt");
+
+	if (M.is_open())
+	{	
+		int i = 0;
+		while (getline(M, line))
+		{
+			*males[i] = line;
+			i++;
+		}
+
+	}
+	M.close();
 }
