@@ -38,6 +38,6 @@ using namespace std;
 int main()
 {
 	
-	return main27();
+	return main5();
 	
 }
